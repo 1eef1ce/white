@@ -1,0 +1,2404 @@
+fontRegular = CodecWarmRegular
+fontBold = CodecWarmBold
+fontExtraBold = CodecWarmExtraBold
+fontMedium = OswaldMedium
+fontLight = OswaldLight
+
+colorBlack = #000000
+colorWhite = #ffffff
+colorGrey = #424242
+colorLightenGrey = #b8b8b8
+colorLightGrey = #616161
+colorDarkGrey = #333333
+
+gradient-bg()
+  background linear-gradient(116.56deg, #9CEEE5 33.33%, #FEB6C5 53.12%, #FDD3B9 72.57%, #F5FABD 100%)
+
+gradient-color()
+  background linear-gradient(168.14deg, #9CEEE5 1.67%, #FEB6C5 30.86%, #FDD3B9 59.54%, #F5FABD 100%)
+
+gradient-strike()
+  background linear-gradient(174.15deg, rgba(156, 238, 229, 0.5) 15.61%,
+                                        rgba(254, 182, 197, 0.5) 35.19%,
+                                        rgba(253, 211, 185, 0.5) 54.42%,
+                                        rgba(245, 250, 189, 0.5) 81.55%)
+
+@font-face
+  font-family OswaldMedium
+  src url(../assets/fonts/Oswald-Medium.woff2) format('woff2'),
+  url(../assets/fonts/Oswald-Medium.woff) format('woff')
+
+@font-face
+  font-family OswaldLight
+  src url(../assets/fonts/Oswald-Light.woff2) format('woff2'),
+  url(../assets/fonts/Oswald-Light.woff) format('woff')
+
+@font-face
+  font-family CodecWarmRegular
+  src url(../assets/fonts/CodecWarm-Regular.woff2) format('woff2'),
+  url(../assets/fonts/CodecWarm-Regular.woff) format('woff')
+
+@font-face
+  font-family CodecWarmBold
+  src url(../assets/fonts/CodecWarm-Bold.woff2) format('woff2'),
+  url(../assets/fonts/CodecWarm-Bold.woff) format('woff')
+
+@font-face
+  font-family CodecWarmExtraBold
+  src url(../assets/fonts/CodecWarm-ExtraBold.woff2) format('woff2'),
+  url(../assets/fonts/CodecWarm-ExtraBold.woff) format('woff')
+
+/** General **/
+.row
+  &:before
+  &:after
+    display inline-block !important
+    content normal
+
+input
+textarea
+  resize none
+  &:focus
+    box-shadow none!important
+
+button
+a
+  display inline-block
+  color inherit
+  text-decoration none
+  &:hover
+  &:focus
+    outline none
+    box-shadow none
+    color inherit
+    text-decoration none
+
+button
+  padding 0
+  border 0
+
+img
+  display block
+  margin auto
+  max-width 100%
+  max-height 100%
+
+ul
+  list-style none
+  margin 0
+  padding 0
+
+s
+  text-decoration none
+  gradient-strike()
+
+body
+  position relative
+  font-family fontRegular, Arial, sans-serif
+  font-size 16px
+  color colorBlack
+  line-height 1
+  background-color colorWhite
+
+/** Containers **/
+.container
+  max-width 80%
+  padding 0
+
+  @media (min-width 640px)
+    max-width 600px
+
+  @media (min-width 1000px)
+    max-width 960px
+
+  @media (min-width 1600px)
+    max-width 1200px
+    margin auto
+
+.container-inner
+  max-width 80%
+  margin auto
+
+  @media (min-width 640px)
+    max-width 600px
+
+.row
+  margin-left 0
+  margin-right 0
+
+  @media (min-width 640px)
+    margin-left -20px
+    margin-right -20px
+
+  @media (min-width 1600px)
+    margin-left -50px
+    margin-right -50px
+
+.col
+[class*="col-"]
+  padding-left 0
+  padding-right 0
+
+  @media (min-width 640px)
+    padding-left 20px
+    padding-right 20px
+
+  @media (min-width 1600px)
+    padding-left 50px
+    padding-right 50px
+
+section
+  margin-bottom 100px
+
+  @media (min-width 640px)
+    margin-bottom 120px
+
+  @media (min-width 1000px)
+    margin-bottom 150px
+
+  @media (min-width 1600px)
+    margin-bottom 200px
+
+/** Headings **/
+h1,h2,h3,h4,
+.h1,.h2,.h3,.h4
+  color colorBlack
+  letter-spacing 0.1em
+  text-transform uppercase
+  font-weight normal
+  margin 0
+  padding 0!important
+  & span
+    font-family fontLight
+
+h1
+.h1
+  position relative
+  font-family fontMedium
+  font-size 33px
+  line-height 1.4
+  margin-bottom 0
+  &:before
+    content ""
+    position absolute
+    width w = 28px
+    height 2px
+    top 0.575em
+    left -(w + 10px)
+    background colorBlack
+  .section-main &
+    margin-bottom 79px
+    &:before
+      content none
+
+  @media (min-width 640px)
+    .section-main &
+      margin-left 38px
+      &:before
+        content ""
+        position absolute
+        width w = 28px
+        height 2px
+        top 0.65em
+        left -(w + 10px)
+        background colorBlack
+
+  @media (min-width 1000px)
+    font-size 48px
+    &:before
+      top 0.675em
+      width w = 50px
+      left -(w + 10px)
+    .section-main &
+      font-size 72px
+      margin-left 100px
+      &:before
+        width w = 70px
+        left -(w + 30px)
+
+  @media (min-width 1600px)
+    &:before
+      width w = 50px
+      left -(w + 20px)
+
+.section-title
+  display flex
+  align-items center
+  background url("../assets/images/gradient-title.png")
+  background-size cover
+  padding 54px 0
+
+  @media (min-width 640px)
+    position relative
+    max-width 600px
+    margin auto
+    .container
+      margin 0 48px
+
+  @media (min-width 1000px)
+    max-width 960px
+    padding 68px 0
+    font-size 72px
+    .container
+      margin 0 80px
+
+  @media (min-width 1600px)
+    max-width 1400px
+    .container
+      margin auto
+
+h2
+.h2
+  position relative
+  font-family fontMedium
+  font-size 24px
+  line-height 1.3
+  margin-bottom 30px
+  &:before
+    content ""
+    position absolute
+    width w = 70px
+    height 1px
+    top 0.575em
+    left -(w + 5px)
+    background colorLightenGrey
+
+  @media (min-width 640px)
+    &:before
+      width w = 32px
+      left -(w + 5px)
+
+  @media (min-width 1000px)
+    font-size 36px
+    margin-bottom 40px
+    &:before
+      width w = 70px
+      left -(w + 10px)
+
+  @media (min-width 1600px)
+    &:before
+      width w = 70px
+      left -(w + 30px)
+
+h3
+.h3
+  font-family fontBold
+  font-size 18px
+  line-height 1.3
+  margin-bottom 20px
+
+  @media (min-width 1000px)
+    font-size 24px
+
+h4
+.h4
+  font-family fontBold
+  font-size 17px
+  line-height 1.5
+  margin-bottom 20px
+
+  @media (min-width 1000px)
+    font-size 20px
+    line-height 1.3
+
+.h4-var
+  font-family fontBold
+  font-size 17px
+  line-height 1.3
+  letter-spacing 0.1em
+  text-transform uppercase
+  color colorLightGrey
+  margin-bottom 14px
+
+/** Regular text **/
+p
+.text-regular
+  font-family fontRegular
+  font-size 16px
+  line-height 1.7
+  color colorBlack
+  margin-bottom 24px
+
+/** Buttons **/
+.btn
+  display flex
+  align-items center
+  justify-content center
+  font-family fontRegular
+  font-size 14px
+  letter-spacing 2px
+  text-transform uppercase
+  color colorWhite
+  width 258px
+  height 56px
+  background colorGrey
+  border 0
+  border-radius 0
+  padding 0
+  &:hover
+  &:focus
+    color colorBlack
+    text-decoration none
+    box-shadow none
+    background url("../assets/images/gradient-btn.png")
+
+.btn-link
+  background colorGrey url("../assets/images/icons/arrow-white-16px.svg") no-repeat right 30px center
+  background-size 16px
+  justify-content start
+  padding 0 30px
+  &:hover
+  &:focus
+    color colorGrey
+    background url("../assets/images/gradient-btn.png"), url("../assets/images/icons/arrow-dark-26px.svg") no-repeat right 30px center
+
+.btn-small
+  width 184px
+  height 40px
+  font-size 12px
+  letter-spacing 0.1em
+  background-position right 15px center
+  padding 0 15px
+  &:hover
+  &:focus
+    background url("../assets/images/gradient-btn.png"), url("../assets/images/icons/arrow-dark-18px.svg") no-repeat right 15px center
+
+  @media (min-width 1000px)
+    width 258px
+    height 56px
+    font-size 14px
+    letter-spacing 2px
+    background-position right 30px center
+    padding 0 30px
+
+.btn-header
+  display none
+  margin-right 55px
+
+  @media (min-width 1000px)
+    display flex
+
+.btn-in
+  position absolute
+  bottom 20px
+  left 0
+  right 0
+  margin auto
+  .section-men-women &
+    bottom 40px
+
+  @media (min-width 1000px)
+    bottom 50px
+
+.btn-tab
+  display flex
+  align-items center
+  justify-content center
+  width 100%
+  height 55px
+  background colorWhite
+  border 1px solid colorGrey
+  font-family fontRegular
+  font-size 14px
+  color colorGrey
+  letter-spacing 2px
+  text-transform uppercase
+  &:hover
+  &:focus
+  &.active
+    background colorGrey
+    color colorWhite
+
+  @media (min-width 640px)
+    width 50%
+
+  @media (min-width 1000px)
+    width 258px
+
+.btn-dropdown
+  position relative
+  display flex
+  align-items center
+  width 100%
+  max-width 348px
+  height 60px
+  padding 0 20px
+  background colorWhite
+  border 1px solid colorLightenGrey
+  font-family fontBold
+  font-size 15px
+  letter-spacing 0.1em
+  text-transform uppercase
+  color rgba(0, 0, 0, 0.3)
+  margin-bottom 40px
+  &:after
+    position absolute
+    right 14px
+    content ""
+    width 0
+    height 0
+    border-left 6px solid transparent
+    border-right 6px solid transparent
+    border-top 10px solid rgba(0, 0, 0, 0.3)
+  &:hover
+  &:focus
+    color rgba(0, 0, 0, 0.3)
+  &[aria-expanded="true"]
+    &:after
+      border-top 0
+      border-bottom  10px solid rgba(0, 0, 0, 0.3)
+
+  @media (min-width 1000px)
+    display none
+
+.btn-square
+  width 40px
+  height 40px
+  +.btn-square
+    margin-left 10px
+
+  @media (min-width 640px)
+    +.btn-square
+      margin-left 20px
+
+.btn-marker
+  background-image url("../assets/images/icons/marker.svg")
+  background-repeat no-repeat
+  background-position center
+
+.btn-phone
+  background-image url("../assets/images/icons/phone.svg")
+  background-repeat no-repeat
+  background-position center
+
+.btn-signup
+  width 200px
+  height 40px
+  font-size 13px
+
+/** Links **/
+.link-lang
+  font-family fontBold
+  font-size 14px
+  color colorLightenGrey
+  text-transform uppercase
+  margin 0 0.35em
+  &:hover
+  &.active
+    color colorBlack
+    border-bottom 2px solid colorBlack
+
+.link-phone
+  font-family fontBold
+  font-size 24px
+  color colorBlack
+  &.link-header
+    margin-right 42px
+
+.link
+  font-family fontRegular
+  font-size 14px
+  letter-spacing 2px
+  text-transform uppercase
+  color colorBlack
+  &:after
+    content url("../assets/images/icons/arrow-dark-18px.svg")
+    margin-left 10px
+  &:hover
+  &:focus
+    &:after
+      content url("../assets/images/icons/arrow-dark-28px.svg")
+
+.link-header
+  display none
+
+  @media (min-width 1000px)
+    display flex
+
+.menu-link
+  display block
+  font-family fontBold
+  font-size 24px
+  letter-spacing 0.1em
+  color colorBlack
+  text-transform uppercase
+  padding 20px 0 16px 50px
+  margin 10px 0
+  &:hover
+  &:focus
+    background url("../assets/images/gradient-menu.png")
+    background-size cover
+
+.footer-menu-link
+  font-family fontRegular
+  font-size 16px
+  line-height 1.7
+  color colorBlack
+
+.link-social
+  display inline-flex
+  margin 10px 0
+  opacity 0.75
+  +.link-social
+    margin-left 30px
+  &:hover
+  &:focus
+    opacity 1
+
+.link-map
+  display flex
+  align-items center
+  font-family fontRegular
+  font-size 16px
+  line-height 1.7
+  color colorDarkGrey
+  text-decoration underline
+  &:hover
+  &:focus
+    text-decoration underline
+  &:before
+    content url("../assets/images/icons/showonmap.svg")
+    width 16px
+    height 16px
+    margin-right 7px
+
+.link-play
+  font-family fontExtraBold
+  font-size 14px
+  color colorBlack
+  letter-spacing 0.3em
+  text-transform uppercase
+  &:after
+    content ""
+    display inline-block
+    width 0
+    height 0
+    border-top 5px solid transparent
+    border-bottom 5px solid transparent
+    border-left 10px solid colorBlack
+    margin-left 10px
+
+.form-link
+  display inline
+  text-decoration underline
+  &:hover
+  &:focus
+    text-decoration underline
+
+.link-underline
+  text-decoration underline
+  &:hover
+  &:focus
+    text-decoration underline
+
+.link-bordered
+  display flex
+  align-items center
+  justify-content center
+  width 300px
+  height 60px
+  border 1px solid colorGrey
+  font-family fontBold
+  font-size 14px
+  letter-spacing 2px
+  color colorBlack
+  text-transform uppercase
+  margin 50px auto 0
+
+/** Image container **/
+.img-container
+  position relative
+
+.img-gradient
+  position absolute
+  width 100%
+  height 100%
+  gradient-bg()
+  opacity 0.3
+  transition all 0.5s ease-in-out
+  &.top-left
+    top -20px
+    left -20px
+    &:hover
+      top 0
+      left 0
+  &.bottom-right
+    bottom -20px
+    right -20px
+    &:hover
+      bottom 0
+      right 0
+  &.top-right
+    top -20px
+    right -20px
+    &:hover
+      top 0
+      right 0
+
+/** Header **/
+header
+.header
+  @media (min-width 1600px)
+    .container
+      max-width 1400px
+
+.navbar
+  height 82px
+  padding 0
+  margin-bottom 20px
+
+  @media (min-width 640px)
+    margin-bottom 30px
+
+  @media (min-width 1000px)
+    height 100%
+    margin 50px 0 100px
+
+  @media (min-width 1600px)
+    margin 50px 0 44px
+
+.navbar-left
+  display flex
+  width 50%
+  align-items center
+  justify-content space-between
+
+  @media (min-width 1000px)
+    width 30%
+
+  @media (min-width 1600px)
+    width 50%
+
+.navbar-right
+  display flex
+  width 50%
+  align-items center
+  justify-content flex-end
+
+  @media (min-width 1000px)
+    width 70%
+
+  @media (min-width 1600px)
+    width 50%
+
+.logo
+  max-height 35px
+  margin 0
+
+  @media (min-width 1000px)
+    max-height 48px
+
+.languages
+  display none
+
+  @media (min-width 1000px)
+    display flex
+
+.navbar-toggler
+  padding 0
+  border 0
+
+.navbar-toggler .icon-bar
+  display block
+  width 55px
+  height 1px
+  background colorDarkGrey
+  position relative
+  transition all 0.15s ease
+  &:nth-of-type(2)
+    width 37px
+    margin-left auto
+
+  @media (min-width 1000px)
+    width 45px
+    &:nth-of-type(2)
+      width 30px
+
+.navbar-toggler .icon-bar+.icon-bar
+  margin-top 12px
+
+  @media (min-width 1000px)
+    margin-top 10px
+
+.navbar-toggler:hover .icon-bar:nth-of-type(2)
+  width 55px
+
+  @media (min-width 1000px)
+    width 45px
+
+/** Footer **/
+footer
+.footer
+  background url("../assets/images/gradient-footer.png")
+  background-size cover
+  padding 50px 0 30px
+  .container
+    max-width 100%
+
+  @media (min-width 640px)
+    padding 48px 0 70px
+    .container
+      max-width 600px
+    .container-inner
+      max-width none
+
+  @media (min-width 1000px)
+    .container
+      max-width 960px
+
+  @media (min-width 1600px)
+    padding 48px 0 0
+    .container
+      max-width 1400px
+
+.footer-logo
+  margin-bottom 50px
+
+  @media (min-width 640px)
+    max-height 48px
+
+.footer-menu
+  display none
+  margin 0 -28px
+
+  @media (min-width 1000px)
+    display flex
+    flex-direction row
+    flex-wrap wrap
+
+  @media (min-width 1600px)
+    justify-content flex-end
+
+.footer-menu-item
+  margin 0 28px 32px
+
+.copyright
+  font-family fontRegular
+  font-size 16px
+  line-height 1.7
+  color colorDarkGrey
+
+  @media (min-width 1600px)
+    margin-top -101px
+
+/** Contacts **/
+.contacts-wrapper
+  margin-bottom 70px
+
+.contacts
+  font-family fontRegular
+  font-size 16px
+  line-height 1.7
+  color colorDarkGrey
+  +.contacts
+    margin-top 24px
+
+.contact
+  font-family fontBold
+  font-size 24px
+  line-height 1.7
+  color colorBlack
+
+/** Main **/
+.section-main
+  background url("../assets/images/bg.png")
+  background-size cover
+  height 450px
+
+  @media (min-width 1000px)
+    height 650px
+
+  @media (min-width 1600px)
+    max-width 1400px
+    margin 0 auto 200px
+    height 700px
+
+.video-wrapper
+  display flex
+  align-items center
+  position relative
+  width 100%
+  height 100%
+  overflow hidden
+  video
+    display none
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    margin auto
+    height 100%
+
+.main-play
+  display flex
+  align-items center
+  justify-content start
+
+  @media (min-width 640px)
+    justify-content flex-end
+
+.text-divider
+  margin 0 20px 0 30px
+
+.text-play
+  font-family fontBold
+  font-size 13px
+  color colorBlack
+  letter-spacing 0.1em
+  text-transform uppercase
+
+.main-img
+  max-width 550px
+  margin-bottom 50px
+
+  @media (min-width 640px)
+    margin-bottom 0
+
+.text-container
+  height 100%
+  h2
+  .h2
+    &:before
+      content none
+  &:before
+    content ""
+    position absolute
+    width w = 70px
+    height 1px
+    top 0.85em
+    left -(w + 5px)
+    background colorLightenGrey
+
+  @media (min-width 640px)
+    &:before
+      width w = 32px
+      left -(w + 5px - 20px)
+
+  @media (min-width 1000px)
+    &:before
+      top 1.25em
+      width w = 70px
+      left -(w + 30px - 20px)
+
+  @media (min-width 1600px)
+    &:before
+      width w = 70px
+      left -(w + 30px - 50px)
+
+.section-men-women
+
+  @media (min-width 640px)
+    .row
+      margin-left 0
+      margin-right 0
+    .col
+    [class*="col-"]
+      padding-left 0
+      padding-right 0
+
+  @media (min-width 1000px)
+    .btn-small
+      bottom 50px
+
+/** Info accordion **/
+.section-info
+  .container
+    max-width 100%
+
+  @media (min-width 640px)
+    .container
+      max-width none
+    .row
+      margin-left 0
+      margin-right 0
+    .col
+    [class*="col-"]
+      padding-left 0
+      padding-right 0
+
+  @media (min-width 1000px)
+    .container
+      max-width 960px
+    .container-inner
+      max-width none
+      margin 0
+
+  @media (min-width 1600px)
+    .container
+      max-width 1400px
+      margin-right 0
+
+.info-block
+  position relative
+  transition all 0.5s ease
+  &.active
+    padding 30px 0 40px
+    margin-bottom 50px
+    background url("../assets/images/gradient-accordion.png")
+    background-size cover
+    &:after
+      content ""
+      position absolute
+      bottom 0
+      left 10%
+      width 41.334%
+      height 2px
+      background colorDarkGrey
+  p
+  .text-regular
+    margin-bottom 0
+
+  @media (min-width 640px)
+    &.active
+      .info-img
+        display flex
+      &:after
+        left 21.5%
+        width 43.438%
+    .container-inner
+      display flex
+      align-items flex-start
+
+  @media (min-width 1000px)
+    padding 0 20px
+    &.active
+      padding 40px 20px 36px
+      margin-bottom 40px
+      &:after
+        left 16.5%
+        width 55.5%
+    .container-inner
+      align-items center
+
+  @media (min-width 1600px)
+    width 100%
+    padding 0 20px 0 56px
+    &.active
+      padding 40px 20px 36px 56px
+      &:after
+        left 0
+        width 36.772%
+
+.info-img
+  display none
+
+  @media (min-width 640px)
+    flex-shrink 0
+    width 125px
+    img
+      max-width 90px
+      margin-left 0
+
+  @media (min-width 1600px)
+    width 195px
+    img
+      max-width 155px
+
+.info-title
+  font-family fontBold
+  font-size 18px
+  line-height 1.3
+  letter-spacing 0.1em
+  text-transform uppercase
+  color colorBlack
+  gradient-color()
+  -webkit-background-clip text
+  -webkit-text-fill-color transparent
+  margin-bottom 30px
+
+  @media (min-width 640px)
+    margin-left 124px
+    max-width 380px
+
+  @media (min-width 1000px)
+    font-size 24px
+    max-width none
+
+  @media (min-width 1600px)
+    margin-left 196px
+
+.info-header
+  &[aria-expanded="true"]
+    .info-title
+      -webkit-text-fill-color initial
+      margin-bottom 36px
+
+  @media (min-width 640px)
+    &[aria-expanded="true"]
+      .info-title
+        margin-bottom 20px
+        margin-left 0
+
+.info-body
+  @media (min-width 1000px)
+    max-width 550px
+
+/** Team accordion **/
+.team-block
+  padding 30px 0
+  border-top 1px solid rgba(0, 0, 0, 0.2)
+  &:last-of-type
+    border-bottom 1px solid rgba(0, 0, 0, 0.2)
+
+.team-header
+  display flex
+  align-items center
+  justify-content space-between
+  &[aria-expanded="true"]
+    .icon
+      background-image url("../assets/images/icons/minus.svg")
+
+.team-img
+  margin 34px 0 30px
+
+  @media (min-width 1000px)
+    max-width 400px
+    margin 0
+
+.team-wrapper
+  max-width 210px
+
+  @media (min-width 640px)
+    max-width none
+
+.team-title
+  font-family fontBold
+  font-size 18px
+  line-height 1.3
+  letter-spacing 0.1em
+  text-transform uppercase
+  color colorBlack
+  margin-bottom 4px
+
+  @media (min-width 1000px)
+    font-size 24px
+
+.team-subtitle
+  font-family fontRegular
+  font-size 16px
+  line-height 1.7
+  color colorLightGrey
+
+.team-body
+
+  @media (min-width 640px)
+    margin-top 30px
+
+  @media (min-width 1000px)
+    .row
+      align-items center
+
+/** Prices accordion **/
+.price-header
+  display flex
+  align-items center
+  justify-content space-between
+  &[aria-expanded="true"]
+    .icon
+      background-image url("../assets/images/icons/minus.svg")
+
+.price-header
+  &[aria-expanded="true"]
+    border-bottom 1px solid rgba(0, 0, 0, 0.2)
+
+.price-block
+  border-top 1px solid rgba(0, 0, 0, 0.2)
+  &:last-of-type
+    border-bottom 1px solid rgba(0, 0, 0, 0.2)
+
+.price-title
+  font-family fontBold
+  font-size 24px
+  line-height 1.3
+  letter-spacing 0.1em
+  text-transform uppercase
+  color colorBlack
+  padding 35px 0
+
+/** Faq accordion **/
+.faq-header
+  display flex
+  align-items center
+  justify-content space-between
+  &[aria-expanded="true"]
+    .icon
+        background-image url("../assets/images/icons/minus.svg")
+
+.faq-block
+  border-top 1px solid rgba(0, 0, 0, 0.2)
+  &:last-of-type
+    border-bottom 1px solid rgba(0, 0, 0, 0.2)
+
+.faq-title
+  font-family fontBold
+  font-size 16px
+  line-height 1.7
+  color colorBlack
+  padding 35px 0
+  max-width 70%
+
+  @media (min-width 640px)
+    max-width 55%
+
+  @media (min-width 1000px)
+    max-width none
+
+.icon
+  display flex
+  align-items center
+  justify-content center
+  flex-shrink 0
+  width 40px
+  height 40px
+  border-radius 100%
+  background #e0e0e0
+  background-image url("../assets/images/icons/plus.svg")
+  background-repeat no-repeat
+  background-position center
+  transition all ease-in-out 0.3s
+
+/** Sign up **/
+.signup
+  background url("../assets/images/gradient-accordion.png")
+  background-size cover
+  padding 37px 0;
+  margin-top 25px
+
+  @media (min-width 640px)
+    margin-top 50px
+
+  @media (min-width 1000px)
+    padding 50px 50px 50px 0
+    margin-top 68px
+
+.signup-wrapper
+  display flex
+  flex-direction column
+  height 120px
+  justify-content space-between
+
+  @media (min-width 640px)
+    flex-direction row
+    height auto
+    align-items center
+    margin-top 30px
+
+  @media (min-width 1000px)
+    margin-top 14px
+
+/** Guarantees **/
+.guarantee
+  margin-bottom 64px
+
+  @media (min-width 640px)
+    width 300px
+    margin-right 36px
+
+  @media (min-width 1000px)
+    width auto
+    margin 0
+
+.row-scroll-guarantees
+
+  @media (min-width 640px)
+    flex-wrap nowrap
+    overflow auto
+
+  @media (min-width 1000px)
+    overflow unset
+    justify-content space-between
+
+[class*="col"]
+  &:last-of-type
+    .guarantee
+      margin-bottom 0
+
+  @media (min-width 640px)
+    &:last-of-type
+      .guarantee
+        margin-right 0
+
+  @media (min-width 1000px)
+    &:nth-of-type(2)
+      .guarantee
+        margin-top 80px
+    &:nth-of-type(3)
+      .guarantee
+        margin-top 50px
+
+.guarantee-wrapper
+  position relative
+  &:hover
+  &:focus
+    .guarantee-container
+      display block
+
+.guarantee-container
+  display none
+  position absolute
+  bottom -1px
+  right -1px
+  width calc(100% - 20px)
+  background colorWhite
+  padding 25px 0 25px 25px
+
+  @media (min-width 1000px)
+    width 250px
+    padding 23px 17px 26px
+
+  @media (min-width 1600px)
+    width calc(100% - 20px)
+
+.guarantee-block
+
+  @media (min-width 640px)
+    max-width 550px
+    margin-bottom 140px
+
+.guarantee-text
+  font-family fontRegular
+  font-size 15px
+  line-height 1.4
+  letter-spacing 0.01em
+  color colorBlack
+  margin-bottom 30px
+
+/** Feedback **/
+.section-feedback
+  background-image url("../assets/images/img-clients.png")
+  background-repeat no-repeat
+  background-position top right 15%
+  background-size 235%
+  padding-top 394px
+
+  @media (min-width 640px)
+    background-position top left 20px
+    background-size 154%
+    padding-top 348px
+
+  @media (min-width 1000px)
+    background-size 145%
+    padding-top 458px
+
+  @media (min-width 1600px)
+    background-position right
+    background-size auto
+    padding-top 520px
+
+.feedback-wrapper
+  &:before
+    position absolute
+    top 0
+    left 0
+    content url("../assets/images/icons/quote.svg")
+
+  @media (min-width 640px)
+    &:before
+      left 20px
+
+  @media (min-width 1000px)
+    &:before
+      top 30px
+      left -55px
+
+  @media (min-width 1600px)
+    &:before
+      left -25px
+
+.feedback-text
+  position relative
+  margin 70px 0 30px
+
+.feedback-author
+  font-family fontBold
+  font-size 18px
+  line-height 1.5
+  letter-spacing 0.1em
+  text-transform uppercase
+  color colorLightGrey
+
+  @media (min-width 1000px)
+    font-size 20px
+
+.feedback-title
+  font-family fontBold
+  font-size 16px
+  line-height 1.7
+  letter-spacing 0.1em
+  text-transform uppercase
+  color colorBlack
+  margin-bottom 20px
+
+.feedback-rating
+  margin 0
+
+/** form **/
+.form-title
+  font-family fontBold
+  font-size 18px
+  line-height 1.5
+  color colorBlack
+  letter-spacing 0.1em
+  text-transform uppercase
+  margin-bottom 34px
+
+  @media (min-width 1000px)
+    font-size 20px
+
+.form-container
+  background colorWhite
+  padding 74px 0 42px
+  margin-bottom 70px
+
+  @media (min-width 640px)
+    padding 75px 20px 84px
+    .container-inner
+      width 400px
+
+  @media (min-width 1000px)
+    width 600px
+
+  @media (min-width 1600px)
+    float right
+    margin-bottom 0
+
+.form-group
+  position relative
+  margin-bottom 40px
+
+.form-control
+  font-family fontRegular
+  font-size 16px
+  color colorBlack
+  height auto
+  padding 0
+  display block
+  border none
+  border-bottom 1px solid colorDarkGrey
+  border-radius 0
+  &:focus
+    color colorBlack
+    border-color transparent
+
+.form-input-label
+  color colorLightGrey
+  font-size 16px
+  position absolute
+  pointer-events none
+  top 0
+  transition 0.2s ease all
+  margin-bottom 0
+
+.form-control:focus ~ .form-input-label
+.form-control:valid ~ .form-input-label
+  top -20px
+  font-size 14px
+  color colorBlack
+
+.bar
+  position relative
+  display block
+
+.bar:before
+.bar:after
+  content ""
+  height 2px
+  width 0
+  bottom 1px
+  position absolute
+  background colorBlack
+  transition 0.2s ease all
+
+.bar:before
+  left 50%
+
+.bar:after
+  right 50%
+
+.form-control:focus ~ .bar:before
+.form-control:focus ~ .bar:after
+  width 50%
+
+.highlight
+  position absolute
+  top 25%
+  left 0
+  pointer-events none
+  opacity 0.5
+
+.form-control:focus ~ .highlight
+  animation inputHighlighter 0.3s ease
+
+@-webkit-keyframes inputHighlighter
+  from
+    background #000
+  to
+    width 0
+    background transparent
+
+@-moz-keyframes inputHighlighter
+  from
+    background #000
+  to
+    width 0
+    background transparent
+
+@keyframes inputHighlighter
+  from
+    background #000
+  to
+    width 0
+    background transparent
+
+.form-check
+  padding-left 0
+
+.form-check-input
+  position absolute
+  opacity 0
+  z-index -1
+
+.custom-control-label
+  font-family fontRegular
+  font-size 16px
+  line-height 1.7
+  color colorLightGrey
+  padding-left 22px
+  &:before
+  &:after
+    position absolute
+    content ""
+    width 16px
+    height 16px
+    border 1px solid colorDarkGrey
+    border-radius 2px
+    top 4px
+    left 0
+    margin 0
+
+.custom-control-input
+  &:checked
+    &~.custom-control-label
+      &:before
+        border-color colorBlack
+        background-color inherit
+      &:after
+        left 5px
+        top 6px
+        width 6px
+        height 10px
+        border solid black
+        border-width 0 3px 3px 0
+        transform rotate(45deg)
+
+.custom-control-input:not(:disabled):active~.custom-control-label::before
+  background-color inherit
+  border-color colorDarkGrey
+
+.custom-control-input:focus ~ .custom-control-label::before
+  box-shadow: none
+
+/** Specialists **/
+.section-specialists
+
+  @media (min-width 1600px)
+    .container
+      max-width 1400px
+      margin-right 0
+
+.specialist-container
+  width 210px
+  margin 20px 40px 48px 20px
+
+  @media (min-width 640px)
+    margin 20px 20px 48px 0
+
+  @media (min-width 1000px)
+    width 323px
+    margin 20px 85px 55px 0
+
+  @media (min-width 1600px)
+    width 400px
+    margin 20px 50px 55px 0
+
+[class*="col"]
+  &:last-of-type
+    .specialist-container
+      margin-right 20px
+  &:nth-of-type(odd)
+    .specialist-container
+      margin-top 40px
+
+.specialist-text
+  margin-top 26px
+
+.specialist-position
+  font-family fontRegular
+  font-size 16px
+  line-height 1.7
+  color colorLightGrey
+
+.row-scroll-specialists
+  flex-wrap nowrap
+  overflow auto
+  -ms-overflow-style none
+  &::-webkit-scrollbar
+    display none
+
+/** Online **/
+.section-online
+  .container
+    max-width none
+
+  @media (min-width 640px)
+    .container
+      >.row
+        margin-left 0
+        margin-right 0
+      .col-left
+        padding-left 0
+      .col-right
+        padding-right 0
+
+.online-img
+  margin-bottom 30px
+
+  @media (min-width 640px)
+    margin-bottom 0
+
+  @media (min-width 1000px)
+    float right
+    margin-top -75%
+
+.online-text
+
+  @media (min-width 1000px)
+    max-width 510px
+
+  @media (min-width 1600px)
+    max-width none
+
+/** Modal **/
+.modal-menu
+  max-width 650px
+  margin 0 0 0 auto
+
+.modal-content
+  height 100vh
+  border 0
+  border-radius 0
+  padding-top 100px
+
+  @media (min-width 640px)
+    padding 140px 0 100px 100px
+
+.close
+  position absolute
+  top 50px
+  right 40px
+  z-index 10
+  background url("../assets/images/icons/close.svg")
+  width 34px
+  height 34px
+  opacity 1
+
+  @media (min-width 640px)
+    top 64px
+    right 100px
+
+.close:not(:disabled):not(.disabled):focus
+.close:not(:disabled):not(.disabled):hover
+  opacity 1
+
+.modal-backdrop
+  width 100%
+  height 100%
+
+/** Swipers **/
+.feedback-navigation
+  display flex
+  align-items center
+  margin 60px 0 100px
+
+  @media (min-width 640px)
+    margin-bottom 0
+
+  @media (min-width 1000px)
+    margin-top 68px
+
+.feedback-pagination
+  width auto
+  margin 0 32px
+  font-family fontRegular
+  font-size 12px
+  letter-spacing 0.2em
+  color colorLightenGrey
+  span
+    color colorBlack
+
+.feedback-nav-prev
+  background url("../assets/images/icons/arrow-wide-prev.svg")
+  width 30px
+  height 18px
+  cursor pointer
+
+.feedback-nav-next
+  background url("../assets/images/icons/arrow-wide-next.svg")
+  width 30px
+  height 18px
+  cursor pointer
+
+.swiper-img
+  padding 20px 0 0 20px
+  margin -20px 0 0 -20px
+  .swiper-slide-next
+    margin-left 20px
+  .swiper-slide-prev
+    padding-right 20px
+
+.swiper-text
+  display flex
+  flex-direction column
+  justify-content space-between
+  height 100%
+
+.text-navigation
+  position relative
+  display flex
+  align-items center
+  justify-content flex-end
+  height 40px
+
+.text-pagination
+  position absolute
+  bottom 0
+  display flex
+  justify-content space-between
+  width 170px
+  font-family fontMedium
+  font-size 34px
+  color colorLightenGrey
+  span
+    color colorDarkGrey
+
+  @media (min-width 1000px)
+    width 260px
+
+.progress-wrapper
+  position absolute
+  bottom 0
+  left 0
+  width 70px
+  height 1px
+  background colorLightenGrey
+  margin 0 50px
+
+  @media (min-width 1000px)
+    width 160px
+
+#progress
+  height 1px
+  background colorDarkGrey
+
+.text-nav-prev
+  background url("../assets/images/icons/arrow-prev.svg")
+  width 31px
+  height 13px
+  cursor pointer
+  margin-right 15px
+
+.text-nav-next
+  background url("../assets/images/icons/arrow-next.svg")
+  width 31px
+  height 13px
+  cursor pointer
+  margin-left 15px
+
+.swiper-img-review
+  .swiper-wrapper
+    height 276px
+  .swiper-slide-active
+    width 230px!important
+    height 230px
+    position absolute
+    right 0
+    top 0
+    z-index 20
+  .swiper-slide-next
+    width 138px!important
+    height 138px
+    position absolute
+    bottom 0
+    left 0
+    z-index 10
+    opacity 0.1
+
+/** Club **/
+.club-img
+  max-width 550px
+  margin-bottom 34px
+
+  @media (min-width 640px)
+    margin-bottom 0
+
+/** Questions **/
+.questions-wrapper
+  margin-bottom 65px
+
+  @media (min-width 1600px)
+    width 500px
+
+.questions-img
+  margin-bottom 30px
+
+.questions-info
+  display flex
+  align-items center
+  font-family fontBold
+  font-size 16px
+  line-height 1.7
+  color colorDarkGrey
+  opacity 0.5
+  margin-bottom 20px
+
+.questions-date
+  &:after
+    content "|"
+    margin 0 0.5em
+
+.questions-text
+  font-family fontRegular
+  font-size 20px
+  line-height 1.3
+  color colorBlack
+  margin-bottom 30px
+
+.question-wrapper
+
+  @media (min-width 1600px)
+    margin-bottom 120px
+
+.question
+  max-width 900px
+
+.question-info
+  display flex
+  align-items center
+  font-size 16px
+  line-height 1.7
+  margin-bottom 30px
+
+.question-date
+  font-family fontRegular
+  color colorLightGrey
+  &:after
+    content "|"
+    margin 0 0.5em
+
+.question-category
+  font-family fontBold
+  color colorBlack
+
+.question-img
+  margin 35px 0 20px
+
+  @media (min-width 640px)
+    margin 45px 0 20px
+
+  @media (min-width 1000px)
+    margin 80px 0 18px
+
+.question-img-text
+  font-family fontRegular
+  font-size 13px
+  line-height 1.7
+  color colorLightGrey
+  margin-bottom 30px
+
+/** Reviews **/
+.reviews-img
+  margin-bottom 76px
+
+  @media (min-width 640px)
+    margin-bottom 0
+
+.review-wrapper
+  margin-bottom 116px
+
+  @media (min-width 1600px)
+    margin-bottom 126px
+    .row
+      align-items center
+
+.review-img
+  margin-bottom 50px
+
+  @media (min-width 1000px)
+    max-width 372px
+
+  @media (min-width 1600px)
+    max-width 550px
+
+.review-date
+  font-family fontRegular
+  font-size 16px
+  line-height 1.7
+  color colorLightGrey
+  margin-bottom 13px
+
+.text-quote
+  position relative
+  font-family fontRegular
+  font-size 16px
+  line-height 1.7
+  color colorBlack
+  margin-bottom 30px
+  &:before
+    position absolute
+    top 0
+    left -38px
+    content ""
+    background url("../assets/images/icons/quote.svg")
+    background-size contain
+    width 28px
+    height 28px
+
+  @media (min-width 1000px)
+    &:before
+      width 50px
+      height 50px
+      top -26px
+      left -80px
+
+.review-author
+  font-family fontBold
+  font-size 17px
+  line-height 1.3
+  letter-spacing 0.1em
+  text-transform uppercase
+  color colorLightGrey
+  margin-bottom 50px
+
+  @media (min-width 1000px)
+    font-size 20px
+    margin-bottom 57px
+
+.section-review
+  .feedback-wrapper
+    &:before
+      position absolute
+      top 62px
+      left -38px
+      content ""
+      background url("../assets/images/icons/quote.svg")
+      background-size contain
+      width 28px
+      height 28px
+
+    @media (min-width 640px)
+      &:before
+        top 92px
+        left -18px
+
+    @media (min-width 1000px)
+      &:before
+        width 50px
+        height 50px
+        top 64px
+        left -60px
+
+    @media (min-width 1600px)
+      &:before
+        left -30px
+
+/** Technologies **/
+.technologies-img
+  margin-bottom 30px
+
+.technologies-list
+  width 100%
+  max-width 348px
+  max-height 350px
+  overflow-y scroll
+  padding 0
+  margin 0
+  margin-top -1px
+  border 1px solid colorLightenGrey
+  border-radius 0
+  li
+    a
+      width 100%
+      font-family fontBold
+      font-size 15px
+      line-height 1.2
+      letter-spacing 0.1em
+      text-transform uppercase
+      color colorLightGrey
+      opacity 0.8
+      padding 18px 31px 14px 19px
+      &:hover
+      &:focus
+        background url("../assets/images/gradient-menu.png")
+        background-size cover
+        color colorBlack
+
+  @media (min-width 1000px)
+    position relative
+    display block
+    max-width 300px
+    max-height none
+    overflow-y auto
+    border 0
+    li
+      a
+        font-size 18px
+        color colorLightenGrey
+        opacity 1
+
+  @media (min-width 1600px)
+    max-width 250px
+
+.tech-img
+  margin-bottom 50px
+
+  @media (min-width 640px)
+    margin-bottom 0
+
+/** Guarantees **/
+.guarantee-block
+  margin-bottom 110px
+  .text-regular
+    margin-bottom 0
+
+  @media (min-width 1000px)
+    max-width none
+    .row
+      align-items center
+
+.guarantees-img
+  margin-bottom 50px
+
+  @media (min-width 1000px)
+    margin-bottom 0
+
+/** Services **/
+.section-services
+
+  @media (min-width 1600px)
+    .row
+      margin-left -25px
+      margin-right -25px
+    .col
+    [class*="col-"]
+      padding-left 25px
+      padding-right 25px
+
+.tabs
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  .section-stages &
+    margin-bottom 30px
+
+  @media (min-width 640px)
+    flex-direction row
+    .section-stages &
+      margin-bottom 50px
+
+  @media (min-width 1600px)
+    .section-stages &
+      margin-bottom 70px
+
+.services-wrapper
+
+  @media (min-width 1000px)
+    display none
+    background colorWhite
+    padding 30px
+    transition all 0.5s ease-in-out
+
+  @media (min-width 1600px)
+    padding 44px 25px 32px
+    h4
+    .h4
+      margin-bottom 0
+
+.service
+  position relative
+  margin-bottom 110px
+
+  @media (min-width 1000px)
+    max-width 430px
+    margin-bottom 65px
+    &:hover
+    &:focus
+      .services-wrapper
+        display block
+        position absolute
+        bottom 0
+
+.services-img
+  margin-bottom 28px
+
+.service-title
+  display none
+
+  @media (min-width 1000px)
+    display block
+
+/** Prices **/
+.price-table-long
+  margin-bottom 0
+  font-family fontBold
+  font-size 16px
+  line-height 1.7
+  color colorBlack
+  tr
+    &:first-of-type
+      td
+        border-top 0
+    td
+      width auto
+      padding 30px 0
+      border-top 1px solid rgba(0, 0, 0, 0.2)
+      &:first-of-type
+        width 70%
+        a
+          margin-top 20px
+      &:nth-of-type(2)
+        text-align right
+      &:last-of-type
+        display none
+      a
+        display block
+
+  @media (min-width 640px)
+    tr
+      td
+        width 33.334%
+        &:first-of-type
+          width 33.334%
+        &:nth-of-type(2)
+          text-align center
+        &:last-of-type
+          display table-cell
+          text-align right
+          padding-right 36px
+
+  @media (min-width 1000px)
+    width calc(100% - 80px)
+    margin auto
+    tr
+      td
+        width auto
+
+  @media (min-width 1600px)
+    width calc(100% - 100px)
+
+.price-table-short
+  margin-bottom 0
+  font-family fontBold
+  font-size 16px
+  line-height 1.7
+  color colorBlack
+  tr
+    &:last-of-type
+      td
+        border-bottom 1px solid rgba(0, 0, 0, 0.2)
+    td
+      width auto
+      padding 30px 0
+      border-top 1px solid rgba(0, 0, 0, 0.2)
+      &:last-of-type
+        width 30%
+        text-align right
+
+  @media (min-width 1600px)
+    tr
+      td
+        &:last-of-type
+          width 20%
+          text-align left
+
+/** First visit **/
+.stage
+  position relative
+  border 1px solid rgba(0, 0, 0, 0.2)
+  min-height 350px
+  padding 30px 20px 15px
+  margin-bottom 30px
+  img
+    height 70px
+    margin-bottom 40px
+  h4
+  .h4
+    text-align center
+  .text-regular
+    margin-bottom 0
+
+  @media (min-width 640px)
+    display flex
+    flex-direction column
+    justify-content space-between
+    min-height 250px
+    padding 30px 10px 25px
+    img
+      margin-bottom 0
+    h4
+    .h4
+      margin-bottom 0
+    .stage-text
+      .text-regular
+        display none
+    &:hover
+    &:focus
+      img
+        opacity 0
+      h4
+      .h4
+        margin-bottom 20px
+      .stage-text
+        position absolute
+        background url("../assets/images/gradient-accordion.png")
+        background-size cover
+        padding 30px 10px 15px
+        bottom 0
+        top 0
+        left 0
+        .text-regular
+          display block
+
+  @media (min-width 1000px)
+    padding 30px
+    img
+      height 100px
+    &:hover
+    &:focus
+      .stage-text
+        padding 40px 50px
+
+  @media (min-width 1600px)
+    padding 30px 10px
+    h4
+    .h4
+      font-size 17px
+    &:hover
+    &:focus
+      .stage-text
+        padding 30px 10px
+
+.section-stages
+
+  @media (min-width 1600px)
+    .row
+      margin-left -15px
+      margin-right -15px
+    .col
+      padding-left 15px
+      padding-right 15px
+
+/** Case **/
+.case-side
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  background url("../assets/images/gradient-side.png")
+  background-size cover
+  height 150px
+  margin 26px 0 100px
+
+  @media (min-width 1000px)
+    height 181px
+
+  @media (min-width 1600px)
+    height 250px
+
+.side-text
+  font-family fontRegular
+  font-size 16px
+  line-height 1.7
+  color colorBlack
+  margin-bottom 10px
+
+  @media (min-width 1000px)
+    font-size 18px
+
+.side-number
+  font-family fontMedium
+  font-size 33px
+  line-height 1.4
+  letter-spacing 0.1em
+  text-transform uppercase
+  color colorBlack
+
+  @media (min-width 1000px)
+    font-size 36px
+
+  @media (min-width 1600px)
+    font-size 72px
+
+.case-service
+  display flex
+  align-items center
+  margin-bottom 30px
+  &:last-of-type
+    margin-bottom 0
+  h3
+  .h3
+    width 35px
+    color colorWhite
+    text-shadow: -1px -1px 0 colorLightGrey,
+                 1px -1px 0 colorLightGrey,
+                 -1px 1px 0 colorLightGrey,
+                 1px 1px 0 colorLightGrey;
+    opacity 0.4
+    margin 0
+  h4
+  .h4
+    margin 0
+    border-bottom 1px solid colorLightGrey
+
+  @media (min-width 1000px)
+    h3
+    .h3
+      width 53px
+
+.case-services
+  .container
+    max-width none
+
+  @media (min-width 640px)
+    .container
+      >.row
+        margin-left 0
+        margin-right 0
+      .col-left
+      .col-right
+        padding 0
+
+  @media (min-width 1000px)
+    .signup
+      padding 44px 0 50px 44px
+
+  @media (min-width 1600px)
+    .signup
+      margin-top 0
+      padding 50px 0 50px 50px
+
+.case-spec
+
+  @media (min-width 1000px)
+    align-items flex-end
+
+  @media (min-width 1600px)
+    align-items center
+
+.case-text
+
+  @media (min-width 1000px)
+    font-size 20px
+
+/** Service **/
+.service-top
+  max-width 1400px
+  margin auto
+
+  @media (min-width 640px)
+    background url("../assets/images/gradient-title.png")
+    background-size cover
+    .section-title
+      background none
+      padding-top 55px
+      .h4-var
+        margin-bottom 20px
+      .btn
+        margin-top 45px
+
+  @media (min-width 1000px)
+    .section-title
+      position absolute
+      top 0
+      bottom 0
+      padding 0
+
+  @media (min-width 1600px)
+    .section-title
+      .container
+        margin-left 100px
+
+.service-img
+  margin 0 20px 50px 0
+
+  @media (min-width 640px)
+    max-width 300px
+    margin-bottom 20px
+    float right
+
+  @media (min-width 1000px)
+    max-width 550px
+
+.section-title
+  .btn
+    margin-top 30px
+
+.service-reason
+  background url("../assets/images/gradient-side.png")
+  background-size cover
+  padding 50px 0 20px
+  h4
+  .h4
+    margin-bottom 30px
+
+  @media (min-width 1600px)
+    .container
+      max-width 950px
+    h4
+    .h4
+      margin-bottom 35px
+
+.price-text
+  display flex
+  align-items center
+  justify-content space-between
+  margin-bottom 25px
+  h2
+  .h2
+    margin-bottom 0
+  .link
+    font-family fontBold
+    font-size 15px
+    letter-spacing 0.1em
+
+  @media (min-width 1000px)
+    margin-bottom 75px
+
+.foreign-img
+  margin-bottom 30px
+
+  @media (min-width 640px)
+    margin-bottom 0
+
+/** Mobile helper **/
+.mobile-helper
+  width 100%
+  position fixed
+  bottom 26px
+  z-index 9999
+  background colorWhite
+  padding 7px 0
+  box-shadow 0px -7px 7px rgba(0, 0, 0, 0.15)
+
+  @media(min-width 1000px)
+    display none
+
+.helper-block
+  display flex
+  align-items center
+  justify-content space-between
+
+.helper-wrapper
+  display flex
+
