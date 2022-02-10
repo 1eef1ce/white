@@ -20,7 +20,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-stylus": "^2.7.0",
     "multipipe": "^3.0.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "rimraf": "^2.6.3",
     "swiper": "^5.2.0"
   },
